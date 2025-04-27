@@ -1,4 +1,3 @@
-
 import { Banner, Product, ProfileContact, Video } from "../types";
 
 export const products: Product[] = [
@@ -209,74 +208,74 @@ export const videos: Video[] = [
   {
     id: 1,
     title: "How to Setup Your New Smartphone",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-1"
+    youtubeId: "6ZfuNTqbHE8",
+    downloadLink: "#video-1"
   },
   {
     id: 2,
     title: "10 Tips for Better Photos",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-2"
+    youtubeId: "PW8tr4j1ZWE",
+    downloadLink: "#video-2"
   },
   {
     id: 3,
     title: "Smart Home Setup Guide",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-3"
+    youtubeId: "F5_MkK39JZo",
+    downloadLink: "#video-3"
   },
   {
     id: 4,
     title: "Gadget Unboxing - Latest Model",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-4"
+    youtubeId: "iee2TATGMyI",
+    downloadLink: "#video-4"
   },
   {
     id: 5,
     title: "Tech Review: Best Products of 2023",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-5"
+    youtubeId: "oHGqD_yGxgE",
+    downloadLink: "#video-5"
   },
   {
     id: 6,
     title: "How to Extend Battery Life",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-6"
+    youtubeId: "2MYD5LUUqXM",
+    downloadLink: "#video-6"
   },
   {
     id: 7,
     title: "Gaming Laptop Performance Test",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-7"
+    youtubeId: "aXVEN9X5zHY",
+    downloadLink: "#video-7"
   },
   {
     id: 8,
     title: "Camera Comparison 2023",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-8"
+    youtubeId: "0Kt0AsQ_OYQ",
+    downloadLink: "#video-8"
   },
   {
     id: 9,
     title: "Budget Tech Under $100",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-9"
+    youtubeId: "WxZz3tFM8Ys",
+    downloadLink: "#video-9"
   },
   {
     id: 10,
     title: "Future Tech Trends",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-10"
+    youtubeId: "r7zJ8srwwjk",
+    downloadLink: "#video-10"
   },
   {
     id: 11,
     title: "Home Office Setup Guide",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-11"
+    youtubeId: "tLvjd8FqNx4",
+    downloadLink: "#video-11"
   },
   {
     id: 12,
     title: "Tech Maintenance Tips",
-    youtubeId: "dQw4w9WgXcQ",
-    downloadLink: "#download-video-12"
+    youtubeId: "9GvQ2uGfz7Q",
+    downloadLink: "#video-12"
   }
 ];
 

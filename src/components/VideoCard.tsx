@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Video } from '../types';
-import { Download } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 interface VideoCardProps {
   video: Video;
@@ -30,8 +30,8 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
             href={downloadLink}
             className="flex items-center text-brand-blue hover:underline"
           >
-            <Download className="w-4 h-4 mr-1" />
-            <span>Download Video</span>
+            <ExternalLink className="w-4 h-4 mr-1" />
+            <span>Visit Video</span>
           </a>
         </div>
       </div>
