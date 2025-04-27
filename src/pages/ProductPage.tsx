@@ -5,6 +5,13 @@ import { products } from '../data/mockData';
 import { Star, ShoppingCart, Share2, ArrowLeft } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const ProductPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -12,7 +19,6 @@ const ProductPage: React.FC = () => {
   const product = products.find(p => p.id === productId);
 
   useEffect(() => {
-    // Scroll to top on page load
     window.scrollTo(0, 0);
   }, []);
 
@@ -56,13 +62,30 @@ const ProductPage: React.FC = () => {
         
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="md:flex">
-            {/* Product Image */}
-            <div className="md:w-1/2 h-64 md:h-auto">
-              <img 
-                src={product.imageUrl} 
-                alt={product.name} 
-                className="w-full h-full object-cover"
-              />
+            {/* Product Images Carousel */}
+            <div className="md:w-1/2 relative">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  <CarouselItem>
+                    <img 
+                      src={product.imageUrl} 
+                      alt={product.name} 
+                      className="w-full h-[400px] object-cover"
+                    />
+                  </CarouselItem>
+                  {product.images?.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <img 
+                        src={image} 
+                        alt={`${product.name} - ${index + 1}`} 
+                        className="w-full h-[400px] object-cover"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
             </div>
             
             {/* Product Details */}
