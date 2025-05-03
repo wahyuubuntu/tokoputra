@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             <img 
               src="https://iili.io/3j86Df2.png?w=120&h=40&fit=crop&auto=format" 
                alt="Toko Putra Logo" 
-               className="h-10 w-auto object-contain"
+               className="h-8 w-auto object-contain"
              />
           </Link>
           
