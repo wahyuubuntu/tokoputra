@@ -104,7 +104,7 @@ const Header: React.FC = () => {
                         />
                         <div>
                           <p className="font-medium text-gray-800">{product.name}</p>
-                          <p className="text-sm text-gray-500">${product.price.toFixed(2)}</p>
+                          <p className="text-sm text-gray-500">${product.price}</p>
                         </div>
                       </div>
                     ))}
