@@ -62,20 +62,6 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
     window.open(whatsappUrl, '_blank');
   };
 
-  // State to control the active review slide index
-  const [activeReviewIndex, setActiveReviewIndex] = useState(0);
-
-  // Automatically change the review slide every 5 seconds
-  useEffect(() => {
-    if (reviews.length > 0) {
-      const interval = setInterval(() => {
-        setActiveReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-      }, 5000); // 5000 ms (5 seconds)
-
-      return () => clearInterval(interval); // Clear the interval on unmount
-    }
-  }, [reviews.length]);
-
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="sm:max-w-3xl max-h-[70vh] overflow-y-auto">
@@ -152,40 +138,30 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
               </button>
             </div>
 
-            {/* Reviews Section as an automatic Slideshow */}
+            {/* Reviews Section */}
             <div className="mt-8">
               <h3 className="font-bold text-lg border-b pb-2">Ulasan dan Rating</h3>
 
-              <Carousel className="w-full mt-4">
-                <CarouselContent>
-                  {/* Review Slideshow */}
-                  {reviews.map((review, index) => (
-                    <CarouselItem key={index}>
-                      <div
-                        className={`border-b pb-4 px-2 ${
-                          index === activeReviewIndex ? 'opacity-100' : 'opacity-0'
-                        } transition-opacity duration-1000`}
-                      >
-                        <div className="flex items-center">
-                          <div className="flex">
-                            {[...Array(5)].map((_, starIndex) => (
-                              <Star 
-                                key={starIndex} 
-                                className={`w-3 h-3 ${starIndex < Math.floor(review.rating) ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`}
-                              />
-                            ))}
-                          </div>
-                          <p className="ml-2 font-medium">{review.title}</p>
-                        </div>
-                        <p className="text-gray-600 mt-2 text-sm">{review.comment}</p>
-                        <p className="text-gray-500 text-xs mt-1">{review.author} - {review.date}</p>
+              {/* Display reviews in a list */}
+              <div className="mt-4">
+                {reviews.map((review, index) => (
+                  <div key={index} className="border-b pb-4 mb-4">
+                    <div className="flex items-center">
+                      <div className="flex">
+                        {[...Array(5)].map((_, starIndex) => (
+                          <Star 
+                            key={starIndex} 
+                            className={`w-3 h-3 ${starIndex < Math.floor(review.rating) ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`}
+                          />
+                        ))}
                       </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="left-2" />
-                <CarouselNext className="right-2" />
-              </Carousel>
+                      <p className="ml-2 font-medium">{review.title}</p>
+                    </div>
+                    <p className="text-gray-600 mt-2 text-sm">{review.comment}</p>
+                    <p className="text-gray-500 text-xs mt-1">{review.author} - {review.date}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Review Form */}
