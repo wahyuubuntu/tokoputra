@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Star, ShoppingCart, Share2 } from 'lucide-react';
 import { Product } from '../types';
 import {
@@ -15,19 +15,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-// Import mock review data
-import { productReviews } from '@/data/mockData';
-
-
-interface Review {
-  productId: string;
-  title: string;
-  comment: string;
-  rating: number;
-  author: string;
-  date: string;
-}
-
 interface ProductModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -35,23 +22,9 @@ interface ProductModalProps {
 }
 
 const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product }) => {
-  const [reviews, setReviews] = useState<Review[]>([]);
-
-  useEffect(() => {
-    if (product) {
-      const filtered = productReviews
-        .filter((r) => r.productId === product.id)
-        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-      setReviews(filtered);
-    }
-  }, [product]);
-
-  const formatDate = (dateStr: string) => {
-    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateStr).toLocaleDateString('id-ID', options);
-  };
-
   if (!product) return null;
+
+  const reviews = product.reviews || [];
 
   const handleShareToWhatsApp = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -110,7 +83,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                 ))}
               </div>
               <span className="ml-2 text-sm font-medium text-gray-600">
-                {product.rating} dari 5 ({reviews.length} ulasan)
+                {product.rating} dari 5 ({product.ratingCount} ulasan)
               </span>
             </div>
 
@@ -158,10 +131,9 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                             />
                           ))}
                         </div>
-                        <p className="ml-2 font-medium">{review.title}</p>
+                        <p className="ml-2 font-medium">{review.user}</p>
                       </div>
                       <p className="text-gray-600 mt-2 text-sm">{review.comment}</p>
-                      <p className="text-gray-500 text-xs mt-1">{review.author} - {formatDate(review.date)}</p>
                     </div>
                   ))}
                 </div>
