@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/carousel";
 
 // Import mock review data
-import { productReviews } from '../../data/mocdata'; // ✅ benar
+import { productReviews } from '../data/mocData'; // ✅ benar
 
 
 interface Review {
