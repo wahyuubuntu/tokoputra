@@ -63,7 +63,7 @@ const Header: React.FC = () => {
       <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center">
-           <img src="i.ibb.co.com/dJt45YDw/Chat-GPT-Image-May-3-2025-09-34-11-AM?w=120&h=40&fit=crop&auto=format"/>
+           <img src="https://i.ibb.co.com/dJt45YDw/Chat-GPT-Image-May-3-2025-09-34-11-AM.png?w=120&h=40&fit=crop&auto=format"/>
           </Link>
           
           <div className="relative" ref={searchRef}>
