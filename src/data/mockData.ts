@@ -477,8 +477,8 @@ export const banners: Banner[] = [
 export const videos: Video[] = [
   {
     id: 1,
-    title: "Perlengkapan Dapur",
-    youtubeId: "XRquOYLP10M",
+    title: "Perlengkapan Usaha Konter",
+    youtubeId: "hQodojfLdfg",
     downloadLink: "https://github.com/"
   },
   {
