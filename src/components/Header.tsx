@@ -49,7 +49,7 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="font-bold text-xl text-brand-blue">
-          TechLink
+          Toko Putra
         </Link>
         
         <div className="relative" ref={searchRef}>
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
             <div className="absolute right-0 top-12 w-80 bg-white shadow-lg rounded-lg p-4 animate-fade-in">
               <input
                 type="text"
-                placeholder="Search products..."
+                placeholder="Cari Produk..."
                 value={searchQuery}
                 onChange={handleSearch}
                 className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:border-brand-blue"
