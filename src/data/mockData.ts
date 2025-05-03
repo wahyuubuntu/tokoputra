@@ -489,7 +489,7 @@ export const videos: Video[] = [
   },
   {
     id: 3,
-    title: "Smart Home Setup Guide",
+    title: "Perlengkapan Sekolah",
     youtubeId: "F5_MkK39JZo",
     downloadLink: "#video-3"
   },
