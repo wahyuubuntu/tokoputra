@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, ShoppingCart, Share2 } from 'lucide-react';
+import { Star, ShoppingCart, Share2, X } from 'lucide-react';
 import { Product } from '../types';
 import {
   Dialog,
@@ -38,7 +38,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="sm:max-w-3xl max-h-[70vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-3xl max-h-[70vh] overflow-y-auto relative">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold">{product.name}</DialogTitle>
         </DialogHeader>
@@ -100,7 +100,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                 className="bg-brand-blue hover:bg-brand-dark text-white font-medium px-4 py-2 rounded-md flex items-center justify-center"
               >
                 <ShoppingCart className="w-4 h-4 mr-1" />
-                Beli Sekarang
+                Beli Sekarang Juga
               </a>
 
               <button
@@ -141,6 +141,15 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
             </div>
           </div>
         </div>
+
+        {/* Close Button - Bottom Right */}
+        <button
+          onClick={onClose}
+          className="absolute bottom-4 right-4 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full shadow-md"
+          aria-label="Close"
+        >
+          <X className="w-4 h-4" />
+        </button>
       </DialogContent>
     </Dialog>
   );
