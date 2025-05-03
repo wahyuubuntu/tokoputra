@@ -12,7 +12,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
   
   // Limit displayed page numbers for better UX
   let pagesToShow = pageNumbers;
-  if (totalPages > 11) {
+  if (totalPages > 12) {
     if (currentPage <= 3) {
       // Show first 5 pages + last page
       pagesToShow = [...pageNumbers.slice(0, 5), totalPages];
