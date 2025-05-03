@@ -7,7 +7,7 @@ export const products: Product[] = [
     price: "129.000",
     imageUrl: "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lom14z9srbftfb.webp?q=80&w=2042&auto=format",
     images: [
-      "https://down-id.img.susercontent.com/file/id-11134103-7r98s-lu61olh9zbt75d.webp?q=80&w=2070&auto=format",
+      "https://s1.bukalapak.com/img/15647546992/s-463-463/data.jpeg.webp?q=80&w=2070&auto=format",
       "https://down-id.img.susercontent.com/file/id-11134207-7rasf-m50fk9amttts86.webp?q=80&w=2070&auto=format",
       "https://down-id.img.susercontent.com/file/id-11134207-7rasc-m50fk9amsf9c64.webp?q=80&w=2070&auto=format"
     ],
