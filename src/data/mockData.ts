@@ -491,7 +491,7 @@ export const videos: Video[] = [
     id: 3,
     title: "Perlengkapan Sekolah",
     youtubeId: "F5_MkK39JZo",
-    downloadLink: "#video-3"
+    downloadLink: "https://www.google.com/"
   },
   {
     id: 4,
