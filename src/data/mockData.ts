@@ -479,7 +479,7 @@ export const videos: Video[] = [
     id: 1,
     title: "Perlengkapan Dapur",
     youtubeId: "XRquOYLP10M",
-    downloadLink: "www.google.com/"
+    downloadLink: "https://github.com/"
   },
   {
     id: 2,
