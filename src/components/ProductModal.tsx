@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/carousel";
 
 // Import mock review data
-import { productReviews } from '../mockData';
+import { productReviews } from '../../data/mockData'; // ✅ disesuaikan dengan struktur folder Anda
 
 interface Review {
   productId: string;
