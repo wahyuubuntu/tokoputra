@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { X, Star, ShoppingCart, Share2 } from 'lucide-react';
 import { Product } from '../types';
 import {
@@ -34,6 +34,18 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
+
+  // State to control the active review slide index
+  const [activeReviewIndex, setActiveReviewIndex] = useState(0);
+
+  // Automatically change the review slide every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveReviewIndex((prevIndex) => (prevIndex + 1) % (product.reviews?.length || 1));
+    }, 5000); // 5000 ms (5 seconds)
+
+    return () => clearInterval(interval); // Clear the interval on unmount
+  }, [product.reviews?.length]);
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -115,7 +127,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
               </button>
             </div>
 
-            {/* Reviews Section as a Slideshow */}
+            {/* Reviews Section as an automatic Slideshow */}
             <div className="mt-8">
               <h3 className="font-bold text-lg border-b pb-2">Reviews</h3>
 
@@ -124,7 +136,11 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                   {/* Review Slideshow */}
                   {product.reviews?.map((review, index) => (
                     <CarouselItem key={index}>
-                      <div className="border-b pb-4 px-2">
+                      <div
+                        className={`border-b pb-4 px-2 ${
+                          index === activeReviewIndex ? 'opacity-100' : 'opacity-0'
+                        } transition-opacity duration-1000`}
+                      >
                         <div className="flex items-center">
                           <div className="flex">
                             {[...Array(5)].map((_, starIndex) => (
@@ -142,8 +158,6 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="left-0" />
-                <CarouselNext className="right-0" />
               </Carousel>
             </div>
           </div>
