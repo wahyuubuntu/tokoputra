@@ -62,8 +62,12 @@ const Header: React.FC = () => {
     <>
       <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          <Link to="/" className="font-bold text-xl text-brand-blue">
-            Toko Putra
+          <Link to="/" className="flex items-center">
+            <img 
+              src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=120&h=40&fit=crop&auto=format" 
+              alt="Toko Putra Logo" 
+              className="h-8 w-auto object-contain"
+            />
           </Link>
           
           <div className="relative" ref={searchRef}>
