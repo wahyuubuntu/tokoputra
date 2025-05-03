@@ -127,7 +127,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                 className="bg-brand-blue hover:bg-brand-dark text-white font-medium px-4 py-2 rounded-md flex items-center justify-center"
               >
                 <ShoppingCart className="w-4 h-4 mr-1" />
-                Beli Sekarang
+                Beli Sekarang Juga
               </a>
 
               <button
