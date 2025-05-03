@@ -3,13 +3,13 @@ import { Banner, Product, ProfileContact, Video } from "../types";
 export const products: Product[] = [
   {
     id: 1,
-    name: "Sendal Anti Slip",
+    name: "Speaker Murotal Quran 30 Juz + Remote Portable + Bisa Bluetooth",
     price: "100.000",
-    imageUrl: "https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m7df32ggm7tz7b.webp?q=80&w=2042&auto=format",
+    imageUrl: "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lom14z9srbftfb.webp?q=80&w=2042&auto=format",
     images: [
-      "https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m7df32ggm7tz7b.webp?q=80&w=2070&auto=format",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format"
+      "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lom14z9srbftfb.webp?q=80&w=2070&auto=format",
+      "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lmy4xgqmtvnw54.webp?q=80&w=2070&auto=format",
+      "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lom14z9srbftfb.webp?q=80&w=2070&auto=format"
     ],
     description: "Latest model with 8K camera and 5G connectivity. Includes AI-powered features and all-day battery life.",
     rating: 4.8, 
