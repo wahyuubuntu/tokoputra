@@ -73,7 +73,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
           </div>
           
           <div className="mt-4">
-            <p className="text-brand-blue text-lg font-bold">${product.price.toFixed(2)}</p>
+            <p className="text-brand-blue text-lg font-bold">${product.price}</p>
             
             <div className="flex items-center mt-2">
               <div className="flex">
