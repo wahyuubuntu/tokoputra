@@ -121,46 +121,64 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
             </div>
             
             {/* Reviews Section */}
-            <div className="mt-8">
-              <h3 className="font-bold text-lg border-b pb-2">Reviews</h3>
-              
-              <div className="space-y-4 mt-4">
-                <div className="border-b pb-4">
-                  <div className="flex items-center">
-                    <div className="flex">
-                      {[...Array(5)].map((_, index) => (
-                        <Star 
-                          key={index} 
-                          className="w-3 h-3 text-yellow-400 fill-yellow-400"
-                        />
-                      ))}
-                    </div>
-                    <p className="ml-2 font-medium">Excellent Product</p>
-                  </div>
-                  <p className="text-gray-600 mt-2 text-sm">
-                    This product exceeded my expectations! The quality is outstanding and it works perfectly.
-                  </p>
-                  <p className="text-gray-500 text-xs mt-1">John D. - 3 days ago</p>
-                </div>
-                
-                <div className="pb-4">
-                  <div className="flex items-center">
-                    <div className="flex">
-                      {[...Array(4)].map((_, index) => (
-                        <Star 
-                          key={index} 
-                          className="w-3 h-3 text-yellow-400 fill-yellow-400"
-                        />
-                      ))}
-                      <Star className="w-3 h-3 text-gray-300" />
-                    </div>
-                    <p className="ml-2 font-medium">Great Value</p>
-                  </div>
-                  <p className="text-gray-600 mt-2 text-sm">
-                    Very happy with my purchase. Good quality for the price and fast shipping.
-                  </p>
-                  <p className="text-gray-500 text-xs mt-1">Sarah M. - 1 week ago</p>
-                </div>
+            {/* Reviews Section (Carousel) */}
+<div className="mt-8">
+  <h3 className="font-bold text-lg border-b pb-2">Reviews</h3>
+
+  <Carousel className="w-full mt-4">
+    <CarouselContent>
+      {/* Review 1 */}
+      <CarouselItem>
+        <div className="border-b pb-4 px-2">
+          <div className="flex items-center">
+            <div className="flex">
+              {[...Array(5)].map((_, index) => (
+                <Star 
+                  key={index} 
+                  className="w-3 h-3 text-yellow-400 fill-yellow-400"
+                />
+              ))}
+            </div>
+            <p className="ml-2 font-medium">Excellent Product</p>
+          </div>
+          <p className="text-gray-600 mt-2 text-sm">
+            This product exceeded my expectations! The quality is outstanding and it works perfectly.
+          </p>
+          <p className="text-gray-500 text-xs mt-1">John D. - 3 days ago</p>
+        </div>
+      </CarouselItem>
+
+      {/* Review 2 */}
+      <CarouselItem>
+        <div className="border-b pb-4 px-2">
+          <div className="flex items-center">
+            <div className="flex">
+              {[...Array(4)].map((_, index) => (
+                <Star 
+                  key={index} 
+                  className="w-3 h-3 text-yellow-400 fill-yellow-400"
+                />
+              ))}
+              <Star className="w-3 h-3 text-gray-300" />
+            </div>
+            <p className="ml-2 font-medium">Great Value</p>
+          </div>
+          <p className="text-gray-600 mt-2 text-sm">
+            Very happy with my purchase. Good quality for the price and fast shipping.
+          </p>
+          <p className="text-gray-500 text-xs mt-1">Sarah M. - 1 week ago</p>
+        </div>
+      </CarouselItem>
+    </CarouselContent>
+    <CarouselPrevious className="left-0" />
+    <CarouselNext className="right-0" />
+  </Carousel>
+</div>
+
+
+
+
+            
               </div>
             </div>
           </div>
