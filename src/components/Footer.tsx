@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Home, Video, Globe, QrCode } from 'lucide-react';
+import { Home, ShoppingCart, Globe, QrCode } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -38,8 +38,8 @@ const Footer: React.FC = () => {
             to="/videos"
             className="flex flex-col items-center text-gray-700 hover:text-brand-blue transition-colors"
           >
-            <Video className="w-6 h-6" />
-            <span className="text-xs mt-1">Videos</span>
+            <ShoppingCart className="w-6 h-6" />
+            <span className="text-xs mt-1">Buy</span>
           </Link>
         </nav>
       </div>
