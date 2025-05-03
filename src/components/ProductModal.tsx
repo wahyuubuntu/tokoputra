@@ -54,7 +54,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                   <img 
                     src={product.imageUrl} 
                     alt={product.name} 
-                    className="w-[300px] h-[300px] object-contain rounded-md"
+                    className="w-full max-w-[300px] h-[300px] object-contain rounded-md mx-auto"
                   />
                 </CarouselItem>
                 {product.images?.map((image, index) => (
@@ -62,7 +62,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                     <img 
                       src={image} 
                       alt={`${product.name} - ${index + 1}`} 
-                      className="w-[300px] h-[300px] object-contain rounded-md"
+                      className="w-full max-w-[300px] h-[300px] object-contain rounded-md mx-auto"
                     />
                   </CarouselItem>
                 ))}
