@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react'; 
 import { Star, ShoppingCart, Share2 } from 'lucide-react';
 import { Product } from '../types';
 import {
@@ -24,30 +24,7 @@ interface ProductModalProps {
 const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product }) => {
   if (!product) return null;
 
-  // State to manage reviews specific to the current product
-  const [reviews, setReviews] = useState<any[]>([
-    {
-      title: 'Sangat Memuaskan!',
-      comment: 'Produk ini sangat berkualitas. Saya sudah mencoba dan hasilnya luar biasa. Penggunaan sangat mudah dan tidak memerlukan banyak waktu untuk belajar.',
-      rating: 5,
-      author: 'Jeni',
-      date: new Date().toLocaleDateString(),
-    },
-    {
-      title: 'Cukup Bagus, Tetapi...',
-      comment: 'Kualitas produk cukup baik, tapi ada beberapa kekurangan seperti pengaturan yang agak rumit untuk pemula. Harga juga sedikit lebih tinggi daripada yang saya harapkan.',
-      rating: 4,
-      author: 'Ali',
-      date: new Date().toLocaleDateString(),
-    },
-    {
-      title: 'Puas dengan Hasilnya',
-      comment: 'Produk ini sangat memenuhi ekspektasi saya. Kinerja sangat cepat, dan desainnya elegan. Cocok untuk penggunaan sehari-hari.',
-      rating: 5,
-      author: 'Hasan',
-      date: new Date().toLocaleDateString(),
-    },
-  ]);
+  const reviews = product.reviews || [];
 
   const handleShareToWhatsApp = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -140,9 +117,8 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
             <div className="mt-8">
               <h3 className="font-bold text-lg border-b pb-2">Ulasan dan Rating</h3>
 
-              {/* Display reviews in a list */}
               <div className="mt-4">
-                {reviews.map((review, index) => (
+                {reviews.length > 0 ? reviews.map((review, index) => (
                   <div key={index} className="border-b pb-4 mb-4">
                     <div className="flex items-center">
                       <div className="flex">
@@ -153,12 +129,14 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                           />
                         ))}
                       </div>
-                      <p className="ml-2 font-medium">{review.title}</p>
+                      <p className="ml-2 font-medium">{review.comment.slice(0, 30)}...</p>
                     </div>
                     <p className="text-gray-600 mt-2 text-sm">{review.comment}</p>
-                    <p className="text-gray-500 text-xs mt-1">{review.author} - {review.date}</p>
+                    <p className="text-gray-500 text-xs mt-1">{review.user}</p>
                   </div>
-                ))}
+                )) : (
+                  <p className="text-gray-500 text-sm">Belum ada ulasan untuk produk ini.</p>
+                )}
               </div>
             </div>
           </div>
