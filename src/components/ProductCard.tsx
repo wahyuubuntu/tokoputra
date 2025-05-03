@@ -17,7 +17,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onProductClick }) =>
     e.stopPropagation();
     
     const productUrl = `${window.location.origin}/product/${id}`;
-    const message = `Check out this product: ${name}\n\nPrice: $${price.toFixed(2)}\n\n${description}\n\nLink: ${productUrl}`;
+    const message = `Check out this product: ${name}\n\nPrice: $${price}\n\n${description}\n\nLink: ${productUrl}`;
     
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
