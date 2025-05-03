@@ -33,7 +33,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
             rel="noopener noreferrer"
           >
             <ShoppingCart className="w-4 h-4 mr-1" />
-            <span>Buy Now</span>
+            <span>Beli Sekarang</span>
           </a>
         </div>
       </div>
