@@ -14,7 +14,19 @@ export const products: Product[] = [
     description: "Latest model with 8K camera and 5G connectivity. Includes AI-powered features and all-day battery life.",
     rating: 4.8, 
     ratingCount: 423,
-    buyLink: "https://example.com/buy/1"
+    buyLink: "https://example.com/buy/1",
+    reviews: [
+    {
+        "user": "Andi",
+        "rating": 4,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    },
+    {
+        "user": "Hadi",
+        "rating": 4,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    }
+]
   },
   {
     id: 2,
@@ -29,7 +41,19 @@ export const products: Product[] = [
     description: "Noise-cancelling earbuds with 36-hour battery life and water resistance.",
     rating: 4.6,
     ratingCount: 829,
-    buyLink: "https://example.com/buy/2"
+    buyLink: "https://example.com/buy/2",
+    reviews: [
+    {
+        "user": "Eka",
+        "rating": 5,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    },
+    {
+        "user": "Budi",
+        "rating": 4,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    }
+]
   },
   {
     id: 3,
@@ -44,7 +68,19 @@ export const products: Product[] = [
     description: "4K resolution with HDR and built-in streaming apps. Voice control and AI upscaling.",
     rating: 4.7,
     ratingCount: 1245,
-    buyLink: "https://example.com/buy/3"
+    buyLink: "https://example.com/buy/3",
+    reviews: [
+    {
+        "user": "Budi",
+        "rating": 5,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Citra",
+        "rating": 3,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    }
+]
   },
   {
     id: 4,
@@ -59,7 +95,19 @@ export const products: Product[] = [
     description: "Health monitoring, GPS, and 100+ workout modes. 3-day battery life.",
     rating: 4.5,
     ratingCount: 678,
-    buyLink: "https://example.com/buy/4"
+    buyLink: "https://example.com/buy/4",
+    reviews: [
+    {
+        "user": "Fajar",
+        "rating": 5,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    },
+    {
+        "user": "Citra",
+        "rating": 4,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    }
+]
   },
   {
     id: 5,
@@ -74,7 +122,19 @@ export const products: Product[] = [
     description: "RTX 4070, 16GB RAM, 1TB SSD, and 165Hz display. RGB keyboard and advanced cooling.",
     rating: 4.9,
     ratingCount: 312,
-    buyLink: "https://example.com/buy/5"
+    buyLink: "https://example.com/buy/5",
+    reviews: [
+    {
+        "user": "Citra",
+        "rating": 5,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    },
+    {
+        "user": "Fajar",
+        "rating": 4,
+        "comment": "Pelayanan cepat, packing rapi."
+    }
+]
   },
   {
     id: 6,
@@ -89,7 +149,19 @@ export const products: Product[] = [
     description: "Waterproof portable speaker with 24-hour playtime and deep bass.",
     rating: 4.4,
     ratingCount: 537,
-    buyLink: "https://example.com/buy/6"
+    buyLink: "https://example.com/buy/6",
+    reviews: [
+    {
+        "user": "Fajar",
+        "rating": 4,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    },
+    {
+        "user": "Hadi",
+        "rating": 3,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    }
+]
   },
   {
     id: 7,
@@ -104,7 +176,19 @@ export const products: Product[] = [
     description: "24.1MP sensor, 4K video, and interchangeable lenses. Includes stabilization.",
     rating: 4.7,
     ratingCount: 423,
-    buyLink: "https://example.com/buy/7"
+    buyLink: "https://example.com/buy/7",
+    reviews: [
+    {
+        "user": "Gina",
+        "rating": 4,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    },
+    {
+        "user": "Hadi",
+        "rating": 5,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    }
+]
   },
   {
     id: 8,
@@ -119,7 +203,19 @@ export const products: Product[] = [
     description: "RGB backlit mechanical gaming keyboard with customizable switches.",
     rating: 4.5,
     ratingCount: 382,
-    buyLink: "https://example.com/buy/8"
+    buyLink: "https://example.com/buy/8",
+    reviews: [
+    {
+        "user": "Hadi",
+        "rating": 5,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    },
+    {
+        "user": "Citra",
+        "rating": 5,
+        "comment": "Pelayanan cepat, packing rapi."
+    }
+]
   },
   {
     id: 9,
@@ -134,7 +230,19 @@ export const products: Product[] = [
     description: "Control all your smart devices with voice commands and automation.",
     rating: 4.3,
     ratingCount: 279,
-    buyLink: "https://example.com/buy/9"
+    buyLink: "https://example.com/buy/9",
+    reviews: [
+    {
+        "user": "Gina",
+        "rating": 4,
+        "comment": "Pelayanan cepat, packing rapi."
+    },
+    {
+        "user": "Fajar",
+        "rating": 4,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    }
+]
   },
   {
     id: 10,
@@ -149,7 +257,19 @@ export const products: Product[] = [
     description: "Premium sound quality with active noise cancellation and 30-hour battery life.",
     rating: 4.8,
     ratingCount: 642,
-    buyLink: "https://example.com/buy/10"
+    buyLink: "https://example.com/buy/10",
+    reviews: [
+    {
+        "user": "Gina",
+        "rating": 4,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Citra",
+        "rating": 3,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    }
+]
   },
   {
     id: 11,
@@ -164,7 +284,19 @@ export const products: Product[] = [
     description: "Track steps, sleep, heart rate and more with 7-day battery life.",
     rating: 4.2,
     ratingCount: 398,
-    buyLink: "https://example.com/buy/11"
+    buyLink: "https://example.com/buy/11",
+    reviews: [
+    {
+        "user": "Dewi",
+        "rating": 5,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    },
+    {
+        "user": "Budi",
+        "rating": 4,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    }
+]
   },
   {
     id: 12,
@@ -179,7 +311,19 @@ export const products: Product[] = [
     description: "Ultra-fast portable storage with USB-C connection. Shock resistant.",
     rating: 4.6,
     ratingCount: 214,
-    buyLink: "https://example.com/buy/12"
+    buyLink: "https://example.com/buy/12",
+    reviews: [
+    {
+        "user": "Fajar",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Citra",
+        "rating": 5,
+        "comment": "Barang sesuai foto, recommended seller!"
+    }
+]
   },
   {
     id: 13,
@@ -194,7 +338,19 @@ export const products: Product[] = [
     description: "5 brushing modes, pressure sensor, and 2-week battery life. Includes smart timer and Bluetooth connectivity.",
     rating: 4.5,
     ratingCount: 387,
-    buyLink: "https://example.com/buy/13"
+    buyLink: "https://example.com/buy/13",
+    reviews: [
+    {
+        "user": "Dewi",
+        "rating": 5,
+        "comment": "Barang sesuai foto, recommended seller!"
+    },
+    {
+        "user": "Fajar",
+        "rating": 5,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 14,
@@ -209,7 +365,19 @@ export const products: Product[] = [
     description: "HEPA filter that removes 99.97% of allergens. App control and air quality monitoring.",
     rating: 4.7,
     ratingCount: 294,
-    buyLink: "https://example.com/buy/14"
+    buyLink: "https://example.com/buy/14",
+    reviews: [
+    {
+        "user": "Andi",
+        "rating": 4,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    },
+    {
+        "user": "Andi",
+        "rating": 3,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    }
+]
   },
   {
     id: 15,
@@ -224,7 +392,19 @@ export const products: Product[] = [
     description: "Smart mapping, automatic recharging, and app control. Works on carpet and hard floors.",
     rating: 4.6,
     ratingCount: 452,
-    buyLink: "https://example.com/buy/15"
+    buyLink: "https://example.com/buy/15",
+    reviews: [
+    {
+        "user": "Andi",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Budi",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    }
+]
   },
   {
     id: 16,
@@ -239,7 +419,19 @@ export const products: Product[] = [
     description: "HD video, motion detection, and two-way audio. Compatible with smart home systems.",
     rating: 4.5,
     ratingCount: 318,
-    buyLink: "https://example.com/buy/16"
+    buyLink: "https://example.com/buy/16",
+    reviews: [
+    {
+        "user": "Dewi",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Gina",
+        "rating": 5,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    }
+]
   },
   {
     id: 17,
@@ -254,7 +446,19 @@ export const products: Product[] = [
     description: "Programmable settings, built-in grinder, and auto-shutoff. Makes espresso, cappuccino, and regular coffee.",
     rating: 4.4,
     ratingCount: 276,
-    buyLink: "https://example.com/buy/17"
+    buyLink: "https://example.com/buy/17",
+    reviews: [
+    {
+        "user": "Fajar",
+        "rating": 5,
+        "comment": "Barang sesuai foto, recommended seller!"
+    },
+    {
+        "user": "Hadi",
+        "rating": 4,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    }
+]
   },
   {
     id: 18,
@@ -269,7 +473,19 @@ export const products: Product[] = [
     description: "Fast wireless charging with LED indicator. Compatible with all Qi-enabled devices.",
     rating: 4.2,
     ratingCount: 198,
-    buyLink: "https://example.com/buy/18"
+    buyLink: "https://example.com/buy/18",
+    reviews: [
+    {
+        "user": "Hadi",
+        "rating": 4,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    },
+    {
+        "user": "Budi",
+        "rating": 3,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 19,
@@ -284,7 +500,19 @@ export const products: Product[] = [
     description: "Ergonomic design with 6 programmable buttons. 12-month battery life and silent clicking.",
     rating: 4.3,
     ratingCount: 367,
-    buyLink: "https://example.com/buy/19"
+    buyLink: "https://example.com/buy/19",
+    reviews: [
+    {
+        "user": "Eka",
+        "rating": 4,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    },
+    {
+        "user": "Hadi",
+        "rating": 3,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 20,
@@ -299,7 +527,19 @@ export const products: Product[] = [
     description: "Adjustable brightness and color temperature. USB charging port and flexible arm.",
     rating: 4.4,
     ratingCount: 245,
-    buyLink: "https://example.com/buy/20"
+    buyLink: "https://example.com/buy/20",
+    reviews: [
+    {
+        "user": "Andi",
+        "rating": 4,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    },
+    {
+        "user": "Eka",
+        "rating": 4,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    }
+]
   },
   {
     id: 21,
@@ -314,7 +554,19 @@ export const products: Product[] = [
     description: "20,000mAh capacity with fast charging. Charges multiple devices simultaneously.",
     rating: 4.6,
     ratingCount: 534,
-    buyLink: "https://example.com/buy/21"
+    buyLink: "https://example.com/buy/21",
+    reviews: [
+    {
+        "user": "Gina",
+        "rating": 4,
+        "comment": "Barang sesuai foto, recommended seller!"
+    },
+    {
+        "user": "Fajar",
+        "rating": 4,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    }
+]
   },
   {
     id: 22,
@@ -329,7 +581,19 @@ export const products: Product[] = [
     description: "16 million colors and voice control. Works with smart home systems and schedules.",
     rating: 4.3,
     ratingCount: 289,
-    buyLink: "https://example.com/buy/22"
+    buyLink: "https://example.com/buy/22",
+    reviews: [
+    {
+        "user": "Citra",
+        "rating": 4,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Fajar",
+        "rating": 5,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    }
+]
   },
   {
     id: 23,
@@ -344,7 +608,19 @@ export const products: Product[] = [
     description: "Portable storage with USB 3.0 for fast data transfer. Compatible with PC and Mac.",
     rating: 4.5,
     ratingCount: 312,
-    buyLink: "https://example.com/buy/23"
+    buyLink: "https://example.com/buy/23",
+    reviews: [
+    {
+        "user": "Hadi",
+        "rating": 5,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Eka",
+        "rating": 3,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    }
+]
   },
   {
     id: 24,
@@ -359,7 +635,19 @@ export const products: Product[] = [
     description: "Ergonomic design with quiet keys. 18-month battery life and multi-device connectivity.",
     rating: 4.4,
     ratingCount: 287,
-    buyLink: "https://example.com/buy/24"
+    buyLink: "https://example.com/buy/24",
+    reviews: [
+    {
+        "user": "Budi",
+        "rating": 5,
+        "comment": "Barang sesuai foto, recommended seller!"
+    },
+    {
+        "user": "Budi",
+        "rating": 3,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 25,
@@ -374,7 +662,19 @@ export const products: Product[] = [
     description: "24-hour battery life with charging case. Water-resistant and touch controls.",
     rating: 4.3,
     ratingCount: 456,
-    buyLink: "https://example.com/buy/25"
+    buyLink: "https://example.com/buy/25",
+    reviews: [
+    {
+        "user": "Fajar",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Budi",
+        "rating": 4,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 26,
@@ -389,7 +689,19 @@ export const products: Product[] = [
     description: "7.1 surround sound, noise-cancelling microphone, and RGB lighting. Compatible with all platforms.",
     rating: 4.5,
     ratingCount: 378,
-    buyLink: "https://example.com/buy/26"
+    buyLink: "https://example.com/buy/26",
+    reviews: [
+    {
+        "user": "Budi",
+        "rating": 5,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    },
+    {
+        "user": "Dewi",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    }
+]
   },
   {
     id: 27,
@@ -404,7 +716,19 @@ export const products: Product[] = [
     description: "Ultra HD video with auto light correction and dual microphones. 90-degree field of view.",
     rating: 4.6,
     ratingCount: 215,
-    buyLink: "https://example.com/buy/27"
+    buyLink: "https://example.com/buy/27",
+    reviews: [
+    {
+        "user": "Budi",
+        "rating": 4,
+        "comment": "Barang sesuai foto, recommended seller!"
+    },
+    {
+        "user": "Budi",
+        "rating": 3,
+        "comment": "Barang sesuai foto, recommended seller!"
+    }
+]
   },
   {
     id: 28,
@@ -419,7 +743,19 @@ export const products: Product[] = [
     description: "IPX7 waterproof, 20-hour playtime, and built-in microphone. Floats in water and has carabiner clip.",
     rating: 4.4,
     ratingCount: 342,
-    buyLink: "https://example.com/buy/28"
+    buyLink: "https://example.com/buy/28",
+    reviews: [
+    {
+        "user": "Eka",
+        "rating": 5,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Hadi",
+        "rating": 3,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    }
+]
   },
   {
     id: 29,
@@ -434,7 +770,19 @@ export const products: Product[] = [
     description: "HD camera with altitude hold and headless mode. 15-minute flight time and foldable design.",
     rating: 4.2,
     ratingCount: 198,
-    buyLink: "https://example.com/buy/29"
+    buyLink: "https://example.com/buy/29",
+    reviews: [
+    {
+        "user": "Fajar",
+        "rating": 4,
+        "comment": "Barang sesuai foto, recommended seller!"
+    },
+    {
+        "user": "Eka",
+        "rating": 4,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 30,
@@ -449,7 +797,19 @@ export const products: Product[] = [
     description: "10W fast charging for all Qi-enabled devices. Slim design with non-slip surface.",
     rating: 4.3,
     ratingCount: 267,
-    buyLink: "https://example.com/buy/30"
+    buyLink: "https://example.com/buy/30",
+    reviews: [
+    {
+        "user": "Hadi",
+        "rating": 4,
+        "comment": "Pelayanan cepat, packing rapi."
+    },
+    {
+        "user": "Andi",
+        "rating": 4,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    }
+]
   }
 ];
 
@@ -458,19 +818,55 @@ export const banners: Banner[] = [
     id: 1,
     imageUrl: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=2070&auto=format",
     title: "Summer Sale - Up to 50% Off",
-    link: "#summer-sale"
+    link: "#summer-sale",
+    reviews: [
+    {
+        "user": "Hadi",
+        "rating": 5,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    },
+    {
+        "user": "Dewi",
+        "rating": 4,
+        "comment": "Barang sesuai foto, recommended seller!"
+    }
+]
   },
   {
     id: 2, 
     imageUrl: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?q=80&w=2025&auto=format",
     title: "New Arrivals - Latest Tech",
-    link: "#new-arrivals"
+    link: "#new-arrivals",
+    reviews: [
+    {
+        "user": "Citra",
+        "rating": 4,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    },
+    {
+        "user": "Andi",
+        "rating": 4,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    }
+]
   },
   {
     id: 3,
     imageUrl: "https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=2070&auto=format",
     title: "Exclusive Products",
-    link: "#exclusive-products"
+    link: "#exclusive-products",
+    reviews: [
+    {
+        "user": "Gina",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Andi",
+        "rating": 4,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    }
+]
   }
 ];
 
@@ -479,181 +875,541 @@ export const videos: Video[] = [
     id: 1,
     title: "Perlengkapan Usaha Konter",
     youtubeId: "hQodojfLdfg",
-    downloadLink: "https://github.com/"
+    downloadLink: "https://github.com/",
+    reviews: [
+    {
+        "user": "Fajar",
+        "rating": 4,
+        "comment": "Pelayanan cepat, packing rapi."
+    },
+    {
+        "user": "Fajar",
+        "rating": 5,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    }
+]
   },
   {
     id: 2,
     title: "Perlengkapan Kantor",
     youtubeId: "PW8tr4j1ZWE",
-    downloadLink: "https://github.com/"
+    downloadLink: "https://github.com/",
+    reviews: [
+    {
+        "user": "Eka",
+        "rating": 4,
+        "comment": "Barang sesuai foto, recommended seller!"
+    },
+    {
+        "user": "Fajar",
+        "rating": 5,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    }
+]
   },
   {
     id: 3,
     title: "Perlengkapan Sekolah",
     youtubeId: "F5_MkK39JZo",
-    downloadLink: "https://www.google.com/"
+    downloadLink: "https://www.google.com/",
+    reviews: [
+    {
+        "user": "Andi",
+        "rating": 5,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    },
+    {
+        "user": "Fajar",
+        "rating": 4,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 4,
     title: "Gadget Unboxing - Latest Model",
     youtubeId: "iee2TATGMyI",
-    downloadLink: "#video-4"
+    downloadLink: "#video-4",
+    reviews: [
+    {
+        "user": "Gina",
+        "rating": 5,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    },
+    {
+        "user": "Andi",
+        "rating": 5,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 5,
     title: "Tech Review: Best Products of 2023",
     youtubeId: "oHGqD_yGxgE",
-    downloadLink: "#video-5"
+    downloadLink: "#video-5",
+    reviews: [
+    {
+        "user": "Eka",
+        "rating": 5,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Budi",
+        "rating": 3,
+        "comment": "Pelayanan cepat, packing rapi."
+    }
+]
   },
   {
     id: 6,
     title: "How to Extend Battery Life",
     youtubeId: "2MYD5LUUqXM",
-    downloadLink: "#video-6"
+    downloadLink: "#video-6",
+    reviews: [
+    {
+        "user": "Hadi",
+        "rating": 4,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Fajar",
+        "rating": 4,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 7,
     title: "Gaming Laptop Performance Test",
     youtubeId: "aXVEN9X5zHY",
-    downloadLink: "#video-7"
+    downloadLink: "#video-7",
+    reviews: [
+    {
+        "user": "Hadi",
+        "rating": 4,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Citra",
+        "rating": 4,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 8,
     title: "Camera Comparison 2023",
     youtubeId: "0Kt0AsQ_OYQ",
-    downloadLink: "#video-8"
+    downloadLink: "#video-8",
+    reviews: [
+    {
+        "user": "Budi",
+        "rating": 4,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Citra",
+        "rating": 3,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    }
+]
   },
   {
     id: 9,
     title: "Budget Tech Under $100",
     youtubeId: "WxZz3tFM8Ys",
-    downloadLink: "#video-9"
+    downloadLink: "#video-9",
+    reviews: [
+    {
+        "user": "Budi",
+        "rating": 5,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    },
+    {
+        "user": "Eka",
+        "rating": 3,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    }
+]
   },
   {
     id: 10,
     title: "Future Tech Trends",
     youtubeId: "r7zJ8srwwjk",
-    downloadLink: "#video-10"
+    downloadLink: "#video-10",
+    reviews: [
+    {
+        "user": "Gina",
+        "rating": 4,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    },
+    {
+        "user": "Eka",
+        "rating": 3,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    }
+]
   },
   {
     id: 11,
     title: "Home Office Setup Guide",
     youtubeId: "tLvjd8FqNx4",
-    downloadLink: "#video-11"
+    downloadLink: "#video-11",
+    reviews: [
+    {
+        "user": "Citra",
+        "rating": 4,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Hadi",
+        "rating": 4,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    }
+]
   },
   {
     id: 12,
     title: "Tech Maintenance Tips",
     youtubeId: "9GvQ2uGfz7Q",
-    downloadLink: "#video-12"
+    downloadLink: "#video-12",
+    reviews: [
+    {
+        "user": "Gina",
+        "rating": 5,
+        "comment": "Pelayanan cepat, packing rapi."
+    },
+    {
+        "user": "Hadi",
+        "rating": 5,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 13,
     title: "Best Android Features You're Not Using",
     youtubeId: "6ySFbsw_XkQ",
-    downloadLink: "#video-13"
+    downloadLink: "#video-13",
+    reviews: [
+    {
+        "user": "Hadi",
+        "rating": 5,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Budi",
+        "rating": 5,
+        "comment": "Pelayanan cepat, packing rapi."
+    }
+]
   },
   {
     id: 14,
     title: "Smart Home Security Setup",
     youtubeId: "XNkOoCGVy9U",
-    downloadLink: "#video-14"
+    downloadLink: "#video-14",
+    reviews: [
+    {
+        "user": "Andi",
+        "rating": 5,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    },
+    {
+        "user": "Eka",
+        "rating": 5,
+        "comment": "Pelayanan cepat, packing rapi."
+    }
+]
   },
   {
     id: 15,
     title: "Ultimate Desk Setup Guide",
     youtubeId: "9no6DNMxvSo",
-    downloadLink: "#video-15"
+    downloadLink: "#video-15",
+    reviews: [
+    {
+        "user": "Eka",
+        "rating": 4,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Hadi",
+        "rating": 3,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    }
+]
   },
   {
     id: 16,
     title: "Tech That Will Change Everything",
     youtubeId: "QtGbC2aaZ_k",
-    downloadLink: "#video-16"
+    downloadLink: "#video-16",
+    reviews: [
+    {
+        "user": "Dewi",
+        "rating": 4,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Fajar",
+        "rating": 3,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    }
+]
   },
   {
     id: 17,
     title: "DIY Computer Building Tutorial",
     youtubeId: "BL4DCEp7blY",
-    downloadLink: "#video-17"
+    downloadLink: "#video-17",
+    reviews: [
+    {
+        "user": "Dewi",
+        "rating": 5,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    },
+    {
+        "user": "Eka",
+        "rating": 3,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    }
+]
   },
   {
     id: 18,
     title: "iPhone Hidden Features Guide",
     youtubeId: "qYK4d7UiO_I",
-    downloadLink: "#video-18"
+    downloadLink: "#video-18",
+    reviews: [
+    {
+        "user": "Andi",
+        "rating": 4,
+        "comment": "Pelayanan cepat, packing rapi."
+    },
+    {
+        "user": "Budi",
+        "rating": 5,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    }
+]
   },
   {
     id: 19,
     title: "Maximizing Your Smartphone Battery",
     youtubeId: "fvVG8l7xvBg",
-    downloadLink: "#video-19"
+    downloadLink: "#video-19",
+    reviews: [
+    {
+        "user": "Citra",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Gina",
+        "rating": 4,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    }
+]
   },
   {
     id: 20,
     title: "Wireless Earbuds Comparison",
     youtubeId: "qUdvzm2c0I0",
-    downloadLink: "#video-20"
+    downloadLink: "#video-20",
+    reviews: [
+    {
+        "user": "Andi",
+        "rating": 5,
+        "comment": "Pelayanan cepat, packing rapi."
+    },
+    {
+        "user": "Hadi",
+        "rating": 4,
+        "comment": "Barang sesuai foto, recommended seller!"
+    }
+]
   },
   {
     id: 21,
     title: "Home Network Optimization Guide",
     youtubeId: "6-RXqFS_UtU",
-    downloadLink: "#video-21"
+    downloadLink: "#video-21",
+    reviews: [
+    {
+        "user": "Eka",
+        "rating": 4,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    },
+    {
+        "user": "Budi",
+        "rating": 3,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    }
+]
   },
   {
     id: 22,
     title: "Best Tech Gifts Under $50",
     youtubeId: "esDi8tIYO_k",
-    downloadLink: "#video-22"
+    downloadLink: "#video-22",
+    reviews: [
+    {
+        "user": "Hadi",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Eka",
+        "rating": 5,
+        "comment": "Kualitas produk di atas ekspektasi!"
+    }
+]
   },
   {
     id: 23,
     title: "Digital Privacy 101",
     youtubeId: "ch2l7CL9eB8",
-    downloadLink: "#video-23"
+    downloadLink: "#video-23",
+    reviews: [
+    {
+        "user": "Hadi",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Gina",
+        "rating": 5,
+        "comment": "Pelayanan cepat, packing rapi."
+    }
+]
   },
   {
     id: 24,
     title: "Smartphone Photography Tips",
     youtubeId: "GhTcvlowMC0",
-    downloadLink: "#video-24"
+    downloadLink: "#video-24",
+    reviews: [
+    {
+        "user": "Andi",
+        "rating": 4,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Citra",
+        "rating": 4,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    }
+]
   },
   {
     id: 25,
     title: "Best Video Editing Apps",
     youtubeId: "k9WwMMs1SaQ",
-    downloadLink: "#video-25"
+    downloadLink: "#video-25",
+    reviews: [
+    {
+        "user": "Fajar",
+        "rating": 4,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    },
+    {
+        "user": "Dewi",
+        "rating": 4,
+        "comment": "Produk tidak mengecewakan, akan beli lagi."
+    }
+]
   },
   {
     id: 26,
     title: "Cloud Storage Comparison",
     youtubeId: "KiXXoDLLd5U",
-    downloadLink: "#video-26"
+    downloadLink: "#video-26",
+    reviews: [
+    {
+        "user": "Budi",
+        "rating": 5,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    },
+    {
+        "user": "Citra",
+        "rating": 5,
+        "comment": "Pelayanan cepat, packing rapi."
+    }
+]
   },
   {
     id: 27,
     title: "Making Your Old Tech New Again",
     youtubeId: "gBC1bQ6L7Os",
-    downloadLink: "#video-27"
+    downloadLink: "#video-27",
+    reviews: [
+    {
+        "user": "Eka",
+        "rating": 4,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    },
+    {
+        "user": "Dewi",
+        "rating": 3,
+        "comment": "Pelayanan cepat, packing rapi."
+    }
+]
   },
   {
     id: 28,
     title: "5G Technology Explained",
     youtubeId: "-uilkmla3H4",
-    downloadLink: "#video-28"
+    downloadLink: "#video-28",
+    reviews: [
+    {
+        "user": "Andi",
+        "rating": 4,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Andi",
+        "rating": 4,
+        "comment": "Harga terjangkau dengan kualitas oke."
+    }
+]
   },
   {
     id: 29,
     title: "Best Portable Chargers Review",
     youtubeId: "9o5gVTwS0DI",
-    downloadLink: "#video-29"
+    downloadLink: "#video-29",
+    reviews: [
+    {
+        "user": "Eka",
+        "rating": 4,
+        "comment": "Produk sangat bagus dan sesuai deskripsi!"
+    },
+    {
+        "user": "Andi",
+        "rating": 5,
+        "comment": "Cukup memuaskan meskipun ada sedikit kekurangan."
+    }
+]
   },
   {
     id: 30,
     title: "Tech Trends for Next Year",
     youtubeId: "aHj08HC9XV8",
-    downloadLink: "#video-30"
+    downloadLink: "#video-30",
+    reviews: [
+    {
+        "user": "Budi",
+        "rating": 4,
+        "comment": "Pengiriman cepat dan barang berkualitas."
+    },
+    {
+        "user": "Dewi",
+        "rating": 5,
+        "comment": "Barang sesuai foto, recommended seller!"
+    }
+]
   }
 ];
 
