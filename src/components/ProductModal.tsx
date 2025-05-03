@@ -42,9 +42,12 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
       <DialogContent className="sm:max-w-3xl max-h-[70vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold">{product.name}</DialogTitle>
-          <DialogClose className="absolute right-4 top-4 text-red-600 hover:text-red-800">
-          <X className="w-6 h-6" />
-          </DialogClose>
+          <DialogClose asChild>
+  <button className="absolute right-4 top-4 text-red-600 hover:text-red-800">
+    <X className="w-6 h-6" />
+  </button>
+</DialogClose>
+
 
         </DialogHeader>
 
