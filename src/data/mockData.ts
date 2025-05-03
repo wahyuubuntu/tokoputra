@@ -12,7 +12,7 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format"
     ],
     description: "Latest model with 8K camera and 5G connectivity. Includes AI-powered features and all-day battery life.",
-    rating: 4.8,
+    rating: 4.8, 
     ratingCount: 423,
     buyLink: "https://example.com/buy/1"
   },
