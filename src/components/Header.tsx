@@ -63,11 +63,13 @@ const Header: React.FC = () => {
       <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img 
-              src="https://iili.io/3j86Df2.png?w=120&h=40&fit=crop&auto=format" 
-               alt="Toko Putra Logo" 
-               className="h-15 w-20 object-contain"
-             />
+           <img 
+  src="https://iili.io/3j86Df2.png?w=120&h=40&fit=crop&auto=format" 
+  alt="Toko Putra Logo" 
+  className="h-[80px] w-[200px]"
+  style={{ flexShrink: 0 }}
+/>
+
           </Link>
           
           <div className="relative" ref={searchRef}>
