@@ -48,7 +48,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
         <div className="mt-4">
           {/* Product Images Carousel */}
           <div className="relative">
-            <Carousel className="w-full">
+            <Carousel className="w-400">
               <CarouselContent>
                 <CarouselItem>
                   <img 
