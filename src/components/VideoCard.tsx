@@ -29,6 +29,8 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
           <a
             href={downloadLink}
             className="flex items-center text-white bg-brand-blue hover:bg-brand-dark px-3 py-1.5 rounded-md w-fit transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <ShoppingCart className="w-4 h-4 mr-1" />
             <span>Buy Now</span>

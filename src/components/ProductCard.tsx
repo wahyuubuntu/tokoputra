@@ -47,16 +47,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onProductClick }) =>
         </div>
         
         <div className="flex justify-between mt-4">
-          <a 
-            href={buyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              onProductClick(product);
+            }}
             className="flex items-center text-sm text-white bg-brand-blue px-2 py-1 rounded-md hover:bg-brand-dark transition-colors"
           >
             <ShoppingCart className="w-4 h-4 mr-1" />
             Buy Now
-          </a>
+          </button>
           
           <button
             onClick={handleShareToWhatsApp}
