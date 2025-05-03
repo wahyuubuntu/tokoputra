@@ -125,7 +125,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
 
             {/* Reviews Section as an automatic Slideshow */}
             <div className="mt-8">
-              <h3 className="font-bold text-lg border-b pb-2">Reviews</h3>
+              <h3 className="font-bold text-lg border-b pb-2">Ulasan dan Rating</h3>
 
               <Carousel className="w-full mt-4">
                 <CarouselContent>
