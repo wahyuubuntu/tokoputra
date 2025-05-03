@@ -3,11 +3,11 @@ import { Banner, Product, ProfileContact, Video } from "../types";
 export const products: Product[] = [
   {
     id: 1,
-    name: "Smartphone XS Pro",
-    price: 799.99,
-    imageUrl: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=2042&auto=format",
+    name: "Sendal Anti Slip",
+    price: 100.000,
+    imageUrl: "https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m7df32g7bwgwa3@resize_w450_nl.webp?q=80&w=2042&auto=format",
     images: [
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format",
+      "https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m7df32g7bwgwa3@resize_w450_nl.webp?q=80&w=2070&auto=format",
       "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format",
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format"
     ],
