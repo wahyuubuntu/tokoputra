@@ -8,8 +8,8 @@ export const products: Product[] = [
     imageUrl: "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lom14z9srbftfb.webp?q=80&w=2042&auto=format",
     images: [
       "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lom14z9srbftfb.webp?q=80&w=2070&auto=format",
-      "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lmy4xgqmtvnw54.webp?q=80&w=2070&auto=format",
-      "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lom14z9srbftfb.webp?q=80&w=2070&auto=format"
+      "https://down-id.img.susercontent.com/file/id-11134207-7rasf-m50fk9amttts86.webp?q=80&w=2070&auto=format",
+      "https://down-id.img.susercontent.com/file/id-11134207-7rasc-m50fk9amsf9c64.webp?q=80&w=2070&auto=format"
     ],
     description: "Latest model with 8K camera and 5G connectivity. Includes AI-powered features and all-day battery life.",
     rating: 4.8, 
