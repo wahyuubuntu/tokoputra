@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { X, Star, ShoppingCart, Share2 } from 'lucide-react';
+import { Star, ShoppingCart, Share2 } from 'lucide-react';
 import { Product } from '../types';
 import {
   Dialog,
@@ -154,6 +154,8 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                     </CarouselItem>
                   ))}
                 </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
               </Carousel>
             </div>
           </div>
