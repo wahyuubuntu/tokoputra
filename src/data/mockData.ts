@@ -168,9 +168,9 @@ export const products: Product[] = [
   },
   {
     id: 12,
-    name: "Portable SSD 1TB",
+    name: "Modem Orbit",
     price: 159.99,
-    imageUrl: "https://images.unsplash.com/photo-1597401631790-00c4bcd6b257?q=80&w=1974&auto=format",
+    imageUrl: "https://down-id.img.susercontent.com/file/id-11134207-7r990-lyd460ebj4g500?q=80&w=1974&auto=format",
     images: [
       "https://images.unsplash.com/photo-1563865473175-249935497d31?q=80&w=2070&auto=format",
       "https://images.unsplash.com/photo-1597037078487-b1a00b6ff337?q=80&w=2142&auto=format",
