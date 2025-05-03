@@ -24,6 +24,7 @@ interface ProductModalProps {
 const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product }) => {
   if (!product) return null;
 
+  // State to manage reviews specific to the current product
   const [reviews, setReviews] = useState<any[]>([
     {
       title: 'Sangat Memuaskan!',
@@ -47,9 +48,6 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
       date: new Date().toLocaleDateString(),
     },
   ]);
-
-  const [rating, setRating] = useState<number>(0); // User's rating input
-  const [reviewText, setReviewText] = useState<string>(''); // User's review text input
 
   const handleShareToWhatsApp = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -163,42 +161,8 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                 ))}
               </div>
             </div>
-
-            {/* Review Form */}
-            <div className="mt-6">
-              <h3 className="font-bold text-lg mb-2">Tulis Ulasan Anda</h3>
-              <div className="flex items-center gap-2 mb-4">
-                {[...Array(5)].map((_, index) => (
-                  <Star
-                    key={index}
-                    className={`w-6 h-6 cursor-pointer ${rating > index ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
-                    onClick={() => setRating(index + 1)}
-                  />
-                ))}
-              </div>
-              <textarea
-                value={reviewText}
-                onChange={(e) => setReviewText(e.target.value)}
-                className="w-full p-2 border rounded-md"
-                placeholder="Tulis ulasan Anda..."
-                rows={4}
-              />
-              <button
-                onClick={() => {
-                  if (rating > 0 && reviewText) {
-                    setReviews([{ title: `Rating ${rating} Stars`, comment: reviewText, rating, author: 'Anonymous', date: new Date().toLocaleDateString() }, ...reviews]);
-                    setReviewText('');
-                    setRating(0);
-                  }
-                }}
-                className="mt-4 bg-brand-blue text-white px-4 py-2 rounded-md"
-              >
-                Kirim Ulasan
-              </button>
-            </div>
           </div>
         </div>
-
       </DialogContent>
     </Dialog>
   );
