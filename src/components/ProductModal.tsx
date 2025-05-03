@@ -26,27 +26,28 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
 
   const [reviews, setReviews] = useState<any[]>([
     {
-      title: 'Rating 5 Stars',
-      comment: 'Sangat menarik, kualitas yang luar biasa!',
+      title: 'Sangat Memuaskan!',
+      comment: 'Produk ini sangat berkualitas. Saya sudah mencoba dan hasilnya luar biasa. Penggunaan sangat mudah dan tidak memerlukan banyak waktu untuk belajar.',
       rating: 5,
       author: 'Jeni',
       date: new Date().toLocaleDateString(),
     },
     {
-      title: 'Rating 4 Stars',
-      comment: 'Bagus sekali, sesuai dengan ekspektasi.',
+      title: 'Cukup Bagus, Tetapi...',
+      comment: 'Kualitas produk cukup baik, tapi ada beberapa kekurangan seperti pengaturan yang agak rumit untuk pemula. Harga juga sedikit lebih tinggi daripada yang saya harapkan.',
       rating: 4,
       author: 'Ali',
       date: new Date().toLocaleDateString(),
     },
     {
-      title: 'Rating 5 Stars',
-      comment: 'Wah hebat, sangat puas dengan produk ini!',
+      title: 'Puas dengan Hasilnya',
+      comment: 'Produk ini sangat memenuhi ekspektasi saya. Kinerja sangat cepat, dan desainnya elegan. Cocok untuk penggunaan sehari-hari.',
       rating: 5,
       author: 'Hasan',
       date: new Date().toLocaleDateString(),
     },
-  ]); // Added the three reviews here
+  ]);
+
   const [rating, setRating] = useState<number>(0); // User's rating input
   const [reviewText, setReviewText] = useState<string>(''); // User's review text input
 
