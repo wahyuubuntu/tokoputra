@@ -3,7 +3,7 @@ import { Banner, Product, ProfileContact, Video } from "../types";
 export const products: Product[] = [
   {
     id: 1,
-    name: "Speaker Murotal Quran 30 Juz + Remote Portable + Bisa Bluetooth",
+    name: "Speaker Murotal Quran 30 Juz + Remote Portable + Bisa Bluetooth ",
     price: "129.000",
     imageUrl: "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lom14z9srbftfb.webp?q=80&w=2042&auto=format",
     images: [
