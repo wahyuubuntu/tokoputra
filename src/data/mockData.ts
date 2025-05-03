@@ -483,9 +483,9 @@ export const videos: Video[] = [
   },
   {
     id: 2,
-    title: "10 Tips for Better Photos",
+    title: "Perlengkapan Kantor",
     youtubeId: "PW8tr4j1ZWE",
-    downloadLink: "#video-2"
+    downloadLink: "https://github.com/"
   },
   {
     id: 3,
