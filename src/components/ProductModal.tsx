@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/carousel";
 
 // Import mock review data
-import { productReviews } from '../data/mocData'; // ✅ benar
+import { productReviews } from '@/data/mockData';
 
 
 interface Review {
