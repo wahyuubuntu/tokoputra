@@ -140,21 +140,20 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
               </div>
             </div>
 
-            {/* Close Button */}
-            <div className="relative mt-8">
-              <div className="absolute bottom-0 right-0 animate-fade-in">
-                <button
-                  onClick={onClose}
-                  className="bg-red-600 hover:bg-red-700 text-white rounded-full p-3 shadow-md"
-                  title="Tutup"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-
           </div>
         </div>
+
+        {/* Close Button (Fixed on screen bottom-right) */}
+        <div className="fixed bottom-6 right-6 z-50">
+          <button
+            onClick={onClose}
+            className="bg-red-600 hover:bg-red-700 text-white rounded-full p-3 shadow-md"
+            title="Tutup"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
       </DialogContent>
     </Dialog>
   );
