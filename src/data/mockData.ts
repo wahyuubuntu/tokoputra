@@ -5,9 +5,9 @@ export const products: Product[] = [
     id: 1,
     name: "Sendal Anti Slip",
     price: 100.000,
-    imageUrl: "https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m7df32g7bwgwa3@resize_w450_nl.webp?q=80&w=2042&auto=format",
+    imageUrl: "https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m7df32ggm7tz7b.webp?q=80&w=2042&auto=format",
     images: [
-      "https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m7df32g7bwgwa3@resize_w450_nl.webp?q=80&w=2070&auto=format",
+      "https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m7df32ggm7tz7b.webp?q=80&w=2070&auto=format",
       "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format",
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format"
     ],
