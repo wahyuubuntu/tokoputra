@@ -64,7 +64,7 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
-              src="https://i.ibb.co.com/dJt45YDw/Chat-GPT-Image-May-3-2025-09-34-11-AM.png?w=120&h=40&fit=crop&auto=format" 
+              src="https://i.ibb.co.com/N6MCN2kb/Chat-GPT-Image-May-3-2025-09-34-11-AM-removebg-preview.png?w=120&h=40&fit=crop&auto=format" 
                alt="Toko Putra Logo" 
                className="h-20 w-auto object-contain"
              />
