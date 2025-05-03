@@ -39,7 +39,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="sm:max-w-3xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-3xl max-h-[70vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold">{product.name}</DialogTitle>
           <DialogClose className="absolute right-4 top-4" />
