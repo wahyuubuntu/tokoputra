@@ -18,13 +18,13 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Wireless Earbuds",
-    price: 129.99,
-    imageUrl: "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?q=80&w=2070&auto=format",
+    name: "Speaker Tanpa Batrei Tinggal Colok",
+    price: "85.000",
+    imageUrl: "https://down-id.img.susercontent.com/file/id-11134207-7rbk9-m7g30wfb242m32.webp?q=80&w=2070&auto=format",
     images: [
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format",
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format",
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2070&auto=format"
+      "https://down-id.img.susercontent.com/file/id-11134207-7rbk6-m8hc789ayozm58@resize_w450_nl.webp?q=80&w=2070&auto=format",
+      "https://down-id.img.susercontent.com/file/id-11134207-7rbka-m8hc789avvuq40@resize_w450_nl.webp?q=80&w=2070&auto=format",
+      "https://down-id.img.susercontent.com/file/id-11134207-7rbk9-m7g30wfb242m32.webp?q=80&w=2070&auto=format"
     ],
     description: "Noise-cancelling earbuds with 36-hour battery life and water resistance.",
     rating: 4.6,
