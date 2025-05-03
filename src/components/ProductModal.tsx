@@ -73,7 +73,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
           </div>
           
           <div className="mt-4">
-            <p className="text-brand-blue text-lg font-bold">${product.price}</p>
+            <p className="text-brand-blue text-lg font-bold">Rp {product.price}</p>
             
             <div className="flex items-center mt-2">
               <div className="flex">
@@ -103,7 +103,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                 className="bg-brand-blue hover:bg-brand-dark text-white font-medium px-4 py-2 rounded-md flex items-center justify-center"
               >
                 <ShoppingCart className="w-4 h-4 mr-1" />
-                Buy Now
+                Beli Sekarang
               </a>
               
               <button
