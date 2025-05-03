@@ -55,7 +55,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onProductClick }) =>
             className="flex items-center text-sm text-white bg-brand-blue px-2 py-1 rounded-md hover:bg-brand-dark transition-colors"
           >
             <ShoppingCart className="w-4 h-4 mr-1" />
-            Buy Now
+            Cek Produk
           </button>
           
           <button
