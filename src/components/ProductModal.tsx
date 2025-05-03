@@ -1,20 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { Star, ShoppingCart, Share2 } from 'lucide-react';
-import { Product, Review } from '../types';
-import { products } from '../mockData';
+import { Product } from '../types';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog';
+} from "@/components/ui/dialog";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
+} from "@/components/ui/carousel";
+
+// Import mock review data
+import { productReviews } from '../mockData'; // pastikan path ini sesuai
+
+interface Review {
+  productId: string;
+  title: string;
+  comment: string;
+  rating: number;
+  author: string;
+  date: string;
+}
 
 interface ProductModalProps {
   isOpen: boolean;
@@ -27,12 +38,8 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
 
   useEffect(() => {
     if (product) {
-      const matchedProduct = products.find((p) => p.id === product.id);
-      if (matchedProduct && matchedProduct.reviews) {
-        setReviews(matchedProduct.reviews);
-      } else {
-        setReviews([]);
-      }
+      const filtered = productReviews.filter((r) => r.productId === product.id);
+      setReviews(filtered);
     }
   }, [product]);
 
@@ -44,7 +51,6 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
 
     const productUrl = `${window.location.origin}/product/${product.id}`;
     const message = `Detail Produk: ${product.name}\n\nPrice: Rp ${product.price}\n\n${product.description}\n\nLink: ${productUrl}`;
-
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -57,7 +63,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
         </DialogHeader>
 
         <div className="mt-4">
-          {/* Carousel */}
+          {/* Product Images Carousel */}
           <div className="relative">
             <Carousel className="w-full">
               <CarouselContent>
@@ -91,11 +97,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                 {[...Array(5)].map((_, index) => (
                   <Star
                     key={index}
-                    className={`w-4 h-4 ${
-                      index < Math.floor(product.rating)
-                        ? 'text-yellow-400 fill-yellow-400'
-                        : 'text-gray-300'
-                    }`}
+                    className={`w-4 h-4 ${index < Math.floor(product.rating) ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`}
                   />
                 ))}
               </div>
@@ -133,7 +135,9 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
             <div className="mt-8">
               <h3 className="font-bold text-lg border-b pb-2">Ulasan dan Rating</h3>
 
-              {reviews.length > 0 ? (
+              {reviews.length === 0 ? (
+                <p className="text-gray-500 mt-2">Belum ada ulasan untuk produk ini.</p>
+              ) : (
                 <div className="mt-4">
                   {reviews.map((review, index) => (
                     <div key={index} className="border-b pb-4 mb-4">
@@ -142,25 +146,17 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                           {[...Array(5)].map((_, starIndex) => (
                             <Star
                               key={starIndex}
-                              className={`w-3 h-3 ${
-                                starIndex < Math.floor(review.rating)
-                                  ? 'text-yellow-400 fill-yellow-400'
-                                  : 'text-gray-300'
-                              }`}
+                              className={`w-3 h-3 ${starIndex < Math.floor(review.rating) ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`}
                             />
                           ))}
                         </div>
                         <p className="ml-2 font-medium">{review.title}</p>
                       </div>
                       <p className="text-gray-600 mt-2 text-sm">{review.comment}</p>
-                      <p className="text-gray-500 text-xs mt-1">
-                        {review.author} - {review.date}
-                      </p>
+                      <p className="text-gray-500 text-xs mt-1">{review.author} - {review.date}</p>
                     </div>
                   ))}
                 </div>
-              ) : (
-                <p className="text-gray-500 text-sm mt-2">Belum ada ulasan untuk produk ini.</p>
               )}
             </div>
           </div>
