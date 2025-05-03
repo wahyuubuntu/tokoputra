@@ -40,7 +40,8 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
       <DialogContent className="sm:max-w-3xl max-h-[70vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold">{product.name}</DialogTitle>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
+          {/* Close button removed here */}
+          <button onClick={onClose} className="text-gray-500 hover:text-gray-700 absolute top-4 right-4">
             <X className="w-5 h-5" />
           </button>
         </DialogHeader>
@@ -114,13 +115,13 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
               </button>
             </div>
 
-            {/* Reviews Section */}
+            {/* Reviews Section as a Slideshow */}
             <div className="mt-8">
               <h3 className="font-bold text-lg border-b pb-2">Reviews</h3>
 
               <Carousel className="w-full mt-4">
                 <CarouselContent>
-                  {/* Example static reviews, replace with product.reviews when available */}
+                  {/* Review Slideshow */}
                   {product.reviews?.map((review, index) => (
                     <CarouselItem key={index}>
                       <div className="border-b pb-4 px-2">
@@ -148,6 +149,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
           </div>
         </div>
 
+        {/* Close button moved to the top right */}
         <div className="flex justify-end mt-6">
           <button
             onClick={onClose}
