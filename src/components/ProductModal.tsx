@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/carousel";
 
 // Import mock review data
-import { productReviews } from '../mockData'; // pastikan path ini sesuai
+import { productReviews } from '../mockData';
 
 interface Review {
   productId: string;
@@ -38,10 +38,17 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
 
   useEffect(() => {
     if (product) {
-      const filtered = productReviews.filter((r) => r.productId === product.id);
+      const filtered = productReviews
+        .filter((r) => r.productId === product.id)
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
       setReviews(filtered);
     }
   }, [product]);
+
+  const formatDate = (dateStr: string) => {
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateStr).toLocaleDateString('id-ID', options);
+  };
 
   if (!product) return null;
 
@@ -102,7 +109,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                 ))}
               </div>
               <span className="ml-2 text-sm font-medium text-gray-600">
-                {product.rating} ({product.ratingCount} ratings)
+                {product.rating} dari 5 ({reviews.length} ulasan)
               </span>
             </div>
 
@@ -153,7 +160,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                         <p className="ml-2 font-medium">{review.title}</p>
                       </div>
                       <p className="text-gray-600 mt-2 text-sm">{review.comment}</p>
-                      <p className="text-gray-500 text-xs mt-1">{review.author} - {review.date}</p>
+                      <p className="text-gray-500 text-xs mt-1">{review.author} - {formatDate(review.date)}</p>
                     </div>
                   ))}
                 </div>
