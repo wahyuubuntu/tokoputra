@@ -31,7 +31,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
     e.stopPropagation();
 
     const productUrl = `${window.location.origin}/product/${product.id}`;
-    const message = `Detail Produk: ${product.name}\n\nPrice: Rp ${product.price}\n\n${product.description}\n\nLink: ${productUrl}`;
+    const message = `Produk: ${product.name}\n\nHarga: Rp ${product.price}\n\n${product.description}\n\nLink: ${productUrl}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
