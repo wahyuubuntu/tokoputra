@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star, ShoppingCart, Share2 } from 'lucide-react';
 import { Product } from '../types';
 import {
@@ -24,6 +24,32 @@ interface ProductModalProps {
 const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product }) => {
   if (!product) return null;
 
+  const [reviews, setReviews] = useState<any[]>([
+    {
+      title: 'Rating 5 Stars',
+      comment: 'Sangat menarik, kualitas yang luar biasa!',
+      rating: 5,
+      author: 'Jeni',
+      date: new Date().toLocaleDateString(),
+    },
+    {
+      title: 'Rating 4 Stars',
+      comment: 'Bagus sekali, sesuai dengan ekspektasi.',
+      rating: 4,
+      author: 'Ali',
+      date: new Date().toLocaleDateString(),
+    },
+    {
+      title: 'Rating 5 Stars',
+      comment: 'Wah hebat, sangat puas dengan produk ini!',
+      rating: 5,
+      author: 'Hasan',
+      date: new Date().toLocaleDateString(),
+    },
+  ]); // Added the three reviews here
+  const [rating, setRating] = useState<number>(0); // User's rating input
+  const [reviewText, setReviewText] = useState<string>(''); // User's review text input
+
   const handleShareToWhatsApp = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -35,26 +61,19 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
     window.open(whatsappUrl, '_blank');
   };
 
-  // Function to get random reviews (up to 3)
-  const getRandomReviews = () => {
-    if (!product.reviews) return [];
-    const shuffledReviews = [...product.reviews].sort(() => 0.5 - Math.random()); // Shuffle the reviews
-    return shuffledReviews.slice(0, 3); // Pick up to 3 random reviews
-  };
-
-  const randomReviews = getRandomReviews();
-
   // State to control the active review slide index
   const [activeReviewIndex, setActiveReviewIndex] = useState(0);
 
   // Automatically change the review slide every 5 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveReviewIndex((prevIndex) => (prevIndex + 1) % randomReviews.length);
-    }, 5000); // 5000 ms (5 seconds)
+    if (reviews.length > 0) {
+      const interval = setInterval(() => {
+        setActiveReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+      }, 5000); // 5000 ms (5 seconds)
 
-    return () => clearInterval(interval); // Clear the interval on unmount
-  }, [randomReviews.length]);
+      return () => clearInterval(interval); // Clear the interval on unmount
+    }
+  }, [reviews.length]);
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -139,7 +158,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
               <Carousel className="w-full mt-4">
                 <CarouselContent>
                   {/* Review Slideshow */}
-                  {randomReviews.map((review, index) => (
+                  {reviews.map((review, index) => (
                     <CarouselItem key={index}>
                       <div
                         className={`border-b pb-4 px-2 ${
@@ -166,6 +185,39 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                 <CarouselPrevious className="left-2" />
                 <CarouselNext className="right-2" />
               </Carousel>
+            </div>
+
+            {/* Review Form */}
+            <div className="mt-6">
+              <h3 className="font-bold text-lg mb-2">Tulis Ulasan Anda</h3>
+              <div className="flex items-center gap-2 mb-4">
+                {[...Array(5)].map((_, index) => (
+                  <Star
+                    key={index}
+                    className={`w-6 h-6 cursor-pointer ${rating > index ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
+                    onClick={() => setRating(index + 1)}
+                  />
+                ))}
+              </div>
+              <textarea
+                value={reviewText}
+                onChange={(e) => setReviewText(e.target.value)}
+                className="w-full p-2 border rounded-md"
+                placeholder="Tulis ulasan Anda..."
+                rows={4}
+              />
+              <button
+                onClick={() => {
+                  if (rating > 0 && reviewText) {
+                    setReviews([{ title: `Rating ${rating} Stars`, comment: reviewText, rating, author: 'Anonymous', date: new Date().toLocaleDateString() }, ...reviews]);
+                    setReviewText('');
+                    setRating(0);
+                  }
+                }}
+                className="mt-4 bg-brand-blue text-white px-4 py-2 rounded-md"
+              >
+                Kirim Ulasan
+              </button>
             </div>
           </div>
         </div>
