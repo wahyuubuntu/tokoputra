@@ -31,7 +31,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
     e.stopPropagation();
     
     const productUrl = `${window.location.origin}/product/${product.id}`;
-    const message = `Check out this product: ${product.name}\n\nPrice: $${product.price.toFixed(2)}\n\n${product.description}\n\nLink: ${productUrl}`;
+    const message = `Detail Produk: ${product.name}\n\nPrice: $${product.price.toFixed(2)}\n\n${product.description}\n\nLink: ${productUrl}`;
     
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -93,7 +93,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
               </span>
             </div>
             
-            <p className="text-gray-600 mt-4">{product.description}</p>
+            <p className="text-gray-300 mt-4">{product.description}</p>
             
             <div className="flex gap-4 mt-6">
               <a 
