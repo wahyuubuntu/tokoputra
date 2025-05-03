@@ -165,6 +165,19 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
             </div>
           </div>
         </div>
+
+<div className="flex justify-end mt-6">
+  <button
+    onClick={onClose}
+    className="text-red-600 hover:text-red-800 font-medium flex items-center gap-1"
+  >
+    <X className="w-5 h-5" />
+    <span>Tutup</span>
+  </button>
+</div>
+
+
+        
       </DialogContent>
     </Dialog>
   );
