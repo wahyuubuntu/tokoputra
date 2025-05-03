@@ -65,7 +65,7 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center">
             <img 
               src="https://iili.io/3jkGS7n.png" 
-              alt="Toko Putra Logo" 
+              alt="Toko Putra Logo" width="50px"
               className="h-8 w-auto object-contain"
             />
           </Link>
