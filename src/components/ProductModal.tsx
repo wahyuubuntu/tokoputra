@@ -93,7 +93,10 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
               </span>
             </div>
             
-            <p className="text-gray-300 mt-4">{product.description}</p>
+            <div className="mt-6">
+              <h3 className="font-bold text-lg mb-2">Deskripsi Produk</h3>
+                <p className="text-black mt-4">{product.description}</p>
+            </div>
             
             <div className="flex gap-4 mt-6">
               <a 
