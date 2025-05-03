@@ -35,17 +35,26 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
     window.open(whatsappUrl, '_blank');
   };
 
+  // Function to get random reviews (up to 3)
+  const getRandomReviews = () => {
+    if (!product.reviews) return [];
+    const shuffledReviews = [...product.reviews].sort(() => 0.5 - Math.random()); // Shuffle the reviews
+    return shuffledReviews.slice(0, 3); // Pick up to 3 random reviews
+  };
+
+  const randomReviews = getRandomReviews();
+
   // State to control the active review slide index
   const [activeReviewIndex, setActiveReviewIndex] = useState(0);
 
   // Automatically change the review slide every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveReviewIndex((prevIndex) => (prevIndex + 1) % (product.reviews?.length || 1));
+      setActiveReviewIndex((prevIndex) => (prevIndex + 1) % randomReviews.length);
     }, 5000); // 5000 ms (5 seconds)
 
     return () => clearInterval(interval); // Clear the interval on unmount
-  }, [product.reviews?.length]);
+  }, [randomReviews.length]);
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -130,7 +139,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
               <Carousel className="w-full mt-4">
                 <CarouselContent>
                   {/* Review Slideshow */}
-                  {product.reviews?.map((review, index) => (
+                  {randomReviews.map((review, index) => (
                     <CarouselItem key={index}>
                       <div
                         className={`border-b pb-4 px-2 ${
